@@ -2,7 +2,7 @@ Latest Release: [v1.0.0](https://github.com/Sharaal/readme-releases/releases/tag
 
 # README-RELEASES
 
-...
+Maintain the latest release, latest major release and all releases GitHub links in the README.md.
 
 ## Installation
 
@@ -10,15 +10,13 @@ Latest Release: [v1.0.0](https://github.com/Sharaal/readme-releases/releases/tag
 npm install --save-dev readme-releases
 ```
 
-## Usage
-
-1. Add the line to the `README.md`:
+* Add the line to the `README.md`:
 
 ```
 Latest Release: ..., Latest Major Release: ..., [All Releases](...)
 ```
 
-2. Add the `version` hook to the `package.json`:
+* Add the `version` hook to the `package.json`:
 
 ```json
 {
@@ -28,7 +26,13 @@ Latest Release: ..., Latest Major Release: ..., [All Releases](...)
 }
 ```
 
-3. From now on everytime you `npm version` the links in the `README.md` will be updated
+## Usage
+
+1. Everytime you `npm version` the links in the `README.md` will be updated
+
+2. Use `git push --follow-tags` to push the changes for the new version together with the created git tag
+
+3. Open the link of the latest release and add a description to it
 
 ## Contact
 
