@@ -1,6 +1,6 @@
 {
   "name": "readme-releases",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Maintain the latest release, latest major release and all releases GitHub links in the README.md.",
   "repository": "Sharaal/readme-releases",
   "license": "MIT",
