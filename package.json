@@ -1,0 +1,33 @@
+{
+  "name": "readme-releases",
+  "version": "0.0.0",
+  "description": "",
+  "repository": "Sharaal/readme-releases",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "readme-releases": "./index.js"
+  },
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "version": "node ./index.js && git add README.md"
+  },
+  "devDependencies": {
+    "husky": "^3.0.0",
+    "standard": "^14.0.0"
+  },
+  "files": [
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
