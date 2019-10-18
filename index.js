@@ -27,7 +27,11 @@ readme = readme.replace(
 )
 fs.writeFileSync(readmePath, readme)
 
+function blue (string) {
+  return `\u001b[34m${string}\u001b[39m`
+}
+
 console.log('Updated README.md:')
-console.log(`Latest Release: ${latestReleaseLabel} ${latestReleaseLink}`)
-console.log(`Latest Major Release: ${latestMajorReleaseLabel} ${latestMajorReleaseLink}`)
-console.log(`All Releases: ${allReleasesLink}`)
+console.log(`Latest Release: ${latestReleaseLabel} ${blue(latestReleaseLink)}`)
+console.log(`Latest Major Release: ${latestMajorReleaseLabel} ${blue(latestMajorReleaseLink)}`)
+console.log(`All Releases: ${blue(allReleasesLink)}`)
