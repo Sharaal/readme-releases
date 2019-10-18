@@ -1,4 +1,4 @@
-Latest Release: [v1.1.0](https://github.com/Sharaal/readme-releases/releases/tag/v1.1.0), Latest Major Release: [v1.0.0](https://github.com/Sharaal/readme-releases/releases/tag/v1.0.0), [All Releases](https://github.com/Sharaal/readme-releases/releases)
+Latest Release: [v1.1.1](https://github.com/Sharaal/readme-releases/releases/tag/v1.1.1), Latest Major Release: [v1.0.0](https://github.com/Sharaal/readme-releases/releases/tag/v1.0.0), [All Releases](https://github.com/Sharaal/readme-releases/releases)
 
 # README-RELEASES
 
