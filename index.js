@@ -7,25 +7,27 @@ const pkg = require(path.join(process.cwd(), 'package.json'))
 
 const readmePath = path.join(process.cwd(), 'README.md')
 let readme = fs.readFileSync(readmePath).toString()
-const latestRelease = `[v${pkg.version}](https://github.com/${pkg.repository}/releases/tag/v${pkg.version})`
+const latestReleaseLabel = `v${pkg.version}`
+const latestReleaseLink = `https://github.com/${pkg.repository}/releases/tag/${latestReleaseLabel}`
 readme = readme.replace(
   /Latest Release: .*?,/,
-  `Latest Release: ${latestRelease},`
+  `Latest Release: [${latestReleaseLabel}](${latestReleaseLink}),`
 )
 const majorVersion = pkg.version.split('.')[0]
-const latestMajorRelease = `[v${majorVersion}.0.0](https://github.com/${pkg.repository}/releases/tag/v${majorVersion}.0.0)`
+const latestMajorReleaseLabel = `v${majorVersion}.0.0`
+const latestMajorReleaseLink = `https://github.com/${pkg.repository}/releases/tag/${latestMajorReleaseLabel}`
 readme = readme.replace(
   /Latest Major Release: .*?,/,
-  `Latest Major Release: ${latestMajorRelease},`
+  `Latest Major Release: [${latestMajorReleaseLabel}](${latestMajorReleaseLink}),`
 )
-const allReleases = `[All Releases](https://github.com/${pkg.repository}/releases)`
+const allReleasesLink = `https://github.com/${pkg.repository}/releases`
 readme = readme.replace(
   /\[All Releases\]\(.*?\)/,
-  allReleases
+  `[All Releases](${allReleasesLink})`
 )
 fs.writeFileSync(readmePath, readme)
 
 console.log('Updated README.md:')
-console.log(`Latest Release: ${latestRelease}`)
-console.log(`Latest Major Release: ${latestMajorRelease}`)
-console.log(`All Releases: ${allReleases}`)
+console.log(`Latest Release: ${latestReleaseLabel} ${latestReleaseLink}`)
+console.log(`Latest Major Release: ${latestMajorReleaseLabel} ${latestMajorReleaseLink}`)
+console.log(`All Releases: ${allReleasesLink}`)
