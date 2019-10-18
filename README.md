@@ -32,7 +32,7 @@ Latest Release: ..., Latest Major Release: ..., [All Releases](...)
 
 2. Use `git push --follow-tags` to push the changes for the new version together with the created git tag
 
-3. Open the link of the latest release (macOS: `cmd` + `double-click` on the link) and add a description to it
+3. Open the link of the latest release (macOS: `cmd` + `double-click` on the link in the console output) and add a description to it
 
 ## Contact
 
